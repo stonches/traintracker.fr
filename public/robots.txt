@@ -1,0 +1,24 @@
+User-agent: *
+Allow: /
+
+# Disallow API endpoints
+Disallow: /api/
+Disallow: /functions/
+
+# Allow all pages and languages
+Allow: /
+Allow: /en/
+Allow: /gare/
+Allow: /en/station/
+Allow: /recherche
+Allow: /en/search
+Allow: /itineraire
+Allow: /en/journey
+Allow: /gares
+Allow: /en/stations
+
+# Sitemap
+Sitemap: https://traintracker.fr/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 1
