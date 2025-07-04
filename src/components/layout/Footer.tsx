@@ -14,7 +14,6 @@ export function Footer() {
     company: [
       { name: t('nav.about'), href: currentLang === 'fr' ? '/a-propos' : '/en/about' },
       { name: t('nav.contact'), href: currentLang === 'fr' ? '/contact' : '/en/contact' },
-      { name: 'API', href: '/api' },
     ],
     legal: [
       { name: t('nav.privacy'), href: currentLang === 'fr' ? '/confidentialite' : '/en/privacy' },
@@ -79,7 +78,7 @@ export function Footer() {
           {/* Company Links */}
           <div>
             <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-4">
-              {currentLang === 'fr' ? 'Entreprise' : 'Company'}
+              {currentLang === 'fr' ? 'Service' : 'Service'}
             </h3>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
@@ -145,23 +144,10 @@ export function Footer() {
             </div>
             <div className="text-sm text-gray-500">
               {currentLang === 'fr' 
-                ? 'Service indépendant non affilié à la SNCF ou aux autorités françaises.'
-                : 'Independent service not affiliated with SNCF or French authorities.'
+                ? 'Service d\'information sur les transports en France.'
+                : 'French transport information service.'
               }
             </div>
-          </div>
-          
-          {/* Disclaimer */}
-          <div className="mt-4 p-4 bg-gray-100 rounded-lg">
-            <p className="text-xs text-gray-600 leading-relaxed">
-              <strong className="font-medium">
-                {currentLang === 'fr' ? 'Avertissement:' : 'Disclaimer:'}
-              </strong>{' '}
-              {currentLang === 'fr' 
-                ? 'Train Tracker France est un service indépendant et n\'est PAS affilié à la SNCF, au gouvernement français ou à toute autorité de transport officielle en France. Les informations sont fournies à titre informatif et peuvent ne pas être complètes ou exactes. Veuillez vérifier les informations officielles avant de voyager.'
-                : 'Train Tracker France is an independent service and is NOT affiliated with SNCF, the French government, or any official transport authority in France. Information is provided for informational purposes and may not be complete or accurate. Please verify official information before traveling.'
-              }
-            </p>
           </div>
         </div>
       </div>

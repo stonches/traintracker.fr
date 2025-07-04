@@ -52,8 +52,8 @@ const MOCK_JOURNEYS: Journey[] = [
     price: { amount: 65, currency: 'EUR' },
     trains: [
       {
-        line: 'TGV',
-        number: 'TGV 6533',
+        line: 'TGV inOui',
+        number: '6533',
         from: 'Paris Gare du Nord',
         to: 'Lyon Part-Dieu',
         departure: '14:35',
@@ -74,8 +74,8 @@ const MOCK_JOURNEYS: Journey[] = [
     price: { amount: 45, currency: 'EUR' },
     trains: [
       {
-        line: 'TGV',
-        number: 'TGV 6635',
+        line: 'OUIGO',
+        number: '7855',
         from: 'Paris Gare du Nord',
         to: 'Lyon Part-Dieu',
         departure: '15:17',
@@ -96,8 +96,8 @@ const MOCK_JOURNEYS: Journey[] = [
     price: { amount: 35, currency: 'EUR' },
     trains: [
       {
-        line: 'TER',
-        number: 'TER 17245',
+        line: 'TER Bourgogne',
+        number: '17245',
         from: 'Paris Gare du Nord',
         to: 'Dijon',
         departure: '16:45',
@@ -105,8 +105,8 @@ const MOCK_JOURNEYS: Journey[] = [
         duration: '1h 45m',
       },
       {
-        line: 'TGV',
-        number: 'TGV 9847',
+        line: 'TGV inOui',
+        number: '9847',
         from: 'Dijon',
         to: 'Lyon Part-Dieu',
         departure: '18:45',
@@ -116,6 +116,28 @@ const MOCK_JOURNEYS: Journey[] = [
     ],
     disruptions: [],
     co2: 1.8,
+    status: 'on_time',
+  },
+  {
+    id: '4',
+    departure: { station: 'Paris Est', time: '07:45' },
+    arrival: { station: 'Strasbourg', time: '09:28' },
+    duration: '1h 43m',
+    changes: 0,
+    price: { amount: 89, currency: 'EUR' },
+    trains: [
+      {
+        line: 'TGV Euroduplex',
+        number: '2713',
+        from: 'Paris Est',
+        to: 'Strasbourg',
+        departure: '07:45',
+        arrival: '09:28',
+        duration: '1h 43m',
+      },
+    ],
+    disruptions: [],
+    co2: 1.9,
     status: 'on_time',
   },
 ];
@@ -313,48 +335,120 @@ export function JourneyPlanner({ lang }: JourneyPlannerProps) {
             <div className="space-y-4">
               {journeys.map((journey) => (
                 <div key={journey.id} className="bg-white rounded-2xl shadow-soft border border-gray-200 overflow-hidden hover:shadow-medium transition-shadow">
-                  <div className="p-6">
-                    {/* Journey Header */}
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center space-x-6">
-                        <div className="text-center">
-                          <div className="text-xl font-bold text-gray-900">{journey.departure.time}</div>
-                          <div className="text-sm text-gray-500">{journey.departure.station}</div>
-                          {journey.departure.platform && (
-                            <div className="text-xs text-gray-400">Voie {journey.departure.platform}</div>
-                          )}
-                        </div>
-                        
-                        <div className="flex flex-col items-center">
-                          <div className="text-sm text-gray-500 mb-1">{journey.duration}</div>
-                          <div className="flex items-center">
-                            <div className="h-0.5 bg-gray-300 w-16"></div>
-                            <ArrowRight className="w-4 h-4 text-gray-400 mx-2" />
-                            <div className="h-0.5 bg-gray-300 w-16"></div>
-                          </div>
-                          {journey.changes > 0 && (
-                            <div className="text-xs text-gray-500 mt-1">
-                              {journey.changes} correspondance{journey.changes > 1 ? 's' : ''}
+                  <div className="p-4 sm:p-6">
+                    {/* Journey Header - Mobile First */}
+                    <div className="space-y-4">
+                      {/* Mobile Layout */}
+                      <div className="md:hidden">
+                        {/* Price and Status */}
+                        <div className="flex items-center justify-between mb-3">
+                          <div className="flex flex-col">
+                            <div className="text-xl font-bold text-primary-600">
+                              {formatPrice(journey.price.amount, journey.price.currency)}
                             </div>
-                          )}
+                            <div className="text-xs text-gray-500">par personne</div>
+                          </div>
+                          <div className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(journey.status)}`}>
+                            {getStatusText(journey.status)}
+                          </div>
                         </div>
-                        
-                        <div className="text-center">
-                          <div className="text-xl font-bold text-gray-900">{journey.arrival.time}</div>
-                          <div className="text-sm text-gray-500">{journey.arrival.station}</div>
-                          {journey.arrival.platform && (
-                            <div className="text-xs text-gray-400">Voie {journey.arrival.platform}</div>
-                          )}
+
+                        {/* Train Types */}
+                        <div className="mb-3">
+                          <div className="flex flex-wrap gap-1">
+                            {journey.trains.map((train, index) => (
+                              <span key={index} className="inline-flex items-center px-2 py-1 bg-primary-100 text-primary-700 text-xs font-medium rounded-md">
+                                {train.line} {train.number}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* Times and Journey Info */}
+                        <div className="grid grid-cols-3 gap-2 items-center">
+                          <div className="text-center">
+                            <div className="text-lg font-bold text-gray-900">{journey.departure.time}</div>
+                            <div className="text-xs text-gray-500 leading-tight">{journey.departure.station}</div>
+                            {journey.departure.platform && (
+                              <div className="text-xs text-gray-400">Voie {journey.departure.platform}</div>
+                            )}
+                          </div>
+                          
+                          <div className="flex flex-col items-center">
+                            <div className="text-xs text-gray-500 mb-1">{journey.duration}</div>
+                            <div className="flex items-center w-full">
+                              <div className="h-0.5 bg-gray-300 flex-1"></div>
+                              <ArrowRight className="w-3 h-3 text-gray-400 mx-1" />
+                              <div className="h-0.5 bg-gray-300 flex-1"></div>
+                            </div>
+                            {journey.changes > 0 && (
+                              <div className="text-xs text-gray-500 mt-1">
+                                {journey.changes} corresp.
+                              </div>
+                            )}
+                          </div>
+                          
+                          <div className="text-center">
+                            <div className="text-lg font-bold text-gray-900">{journey.arrival.time}</div>
+                            <div className="text-xs text-gray-500 leading-tight">{journey.arrival.station}</div>
+                            {journey.arrival.platform && (
+                              <div className="text-xs text-gray-400">Voie {journey.arrival.platform}</div>
+                            )}
+                          </div>
                         </div>
                       </div>
 
-                      <div className="text-right">
-                        <div className="text-2xl font-bold text-primary-600">
-                          {formatPrice(journey.price.amount, journey.price.currency)}
+                      {/* Desktop Layout */}
+                      <div className="hidden md:flex items-center justify-between">
+                        <div className="flex items-center space-x-6">
+                          <div className="text-center">
+                            <div className="text-xl font-bold text-gray-900">{journey.departure.time}</div>
+                            <div className="text-sm text-gray-500">{journey.departure.station}</div>
+                            {journey.departure.platform && (
+                              <div className="text-xs text-gray-400">Voie {journey.departure.platform}</div>
+                            )}
+                          </div>
+                          
+                          <div className="flex flex-col items-center">
+                            <div className="text-sm text-gray-500 mb-1">{journey.duration}</div>
+                            <div className="flex items-center">
+                              <div className="h-0.5 bg-gray-300 w-16"></div>
+                              <ArrowRight className="w-4 h-4 text-gray-400 mx-2" />
+                              <div className="h-0.5 bg-gray-300 w-16"></div>
+                            </div>
+                            {journey.changes > 0 && (
+                              <div className="text-xs text-gray-500 mt-1">
+                                {journey.changes} correspondance{journey.changes > 1 ? 's' : ''}
+                              </div>
+                            )}
+                          </div>
+                          
+                          <div className="text-center">
+                            <div className="text-xl font-bold text-gray-900">{journey.arrival.time}</div>
+                            <div className="text-sm text-gray-500">{journey.arrival.station}</div>
+                            {journey.arrival.platform && (
+                              <div className="text-xs text-gray-400">Voie {journey.arrival.platform}</div>
+                            )}
+                          </div>
+
+                          {/* Train Types on Desktop */}
+                          <div className="flex flex-col space-y-1">
+                            {journey.trains.map((train, index) => (
+                              <span key={index} className="inline-flex items-center px-2 py-1 bg-primary-100 text-primary-700 text-xs font-medium rounded-md">
+                                {train.line} {train.number}
+                              </span>
+                            ))}
+                          </div>
                         </div>
-                        <div className="text-sm text-gray-500">par personne</div>
-                        <div className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium mt-2 ${getStatusColor(journey.status)}`}>
-                          {getStatusText(journey.status)}
+
+                        <div className="text-right">
+                          <div className="text-2xl font-bold text-primary-600">
+                            {formatPrice(journey.price.amount, journey.price.currency)}
+                          </div>
+                          <div className="text-sm text-gray-500">par personne</div>
+                          <div className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium mt-2 ${getStatusColor(journey.status)}`}>
+                            {getStatusText(journey.status)}
+                          </div>
                         </div>
                       </div>
                     </div>
