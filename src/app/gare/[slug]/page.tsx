@@ -9,7 +9,7 @@ interface StationPageProps {
   }>;
 }
 
-// Mock station data
+// Station data with proper UIC codes
 const STATIONS = {
   'gare-du-nord': {
     id: 'stop_area:OCE:SA:87686006',
@@ -34,6 +34,62 @@ const STATIONS = {
     coordinates: { lat: 48.8404, lon: 2.3193 },
     region: 'Île-de-France',
     departement: 'Paris',
+  },
+  'part-dieu': {
+    id: 'stop_area:OCE:SA:87723197',
+    name: 'Part-Dieu',
+    slug: 'part-dieu',
+    coordinates: { lat: 45.7603, lon: 4.8595 },
+    region: 'Auvergne-Rhône-Alpes',
+    departement: 'Lyon',
+  },
+  'marseille-saint-charles': {
+    id: 'stop_area:OCE:SA:87751008',
+    name: 'Marseille Saint-Charles',
+    slug: 'marseille-saint-charles',
+    coordinates: { lat: 43.3029, lon: 5.3808 },
+    region: 'Provence-Alpes-Côte d\'Azur',
+    departement: 'Marseille',
+  },
+  'toulouse-matabiau': {
+    id: 'stop_area:OCE:SA:87611004',
+    name: 'Toulouse Matabiau',
+    slug: 'toulouse-matabiau',
+    coordinates: { lat: 43.6109, lon: 1.4540 },
+    region: 'Occitanie',
+    departement: 'Toulouse',
+  },
+  'lille-europe': {
+    id: 'stop_area:OCE:SA:87286005',
+    name: 'Lille Europe',
+    slug: 'lille-europe',
+    coordinates: { lat: 50.6386, lon: 3.0754 },
+    region: 'Hauts-de-France',
+    departement: 'Lille',
+  },
+  'strasbourg': {
+    id: 'stop_area:OCE:SA:87212027',
+    name: 'Strasbourg',
+    slug: 'strasbourg',
+    coordinates: { lat: 48.5847, lon: 7.7339 },
+    region: 'Grand Est',
+    departement: 'Strasbourg',
+  },
+  'bordeaux-saint-jean': {
+    id: 'stop_area:OCE:SA:87581009',
+    name: 'Bordeaux Saint-Jean',
+    slug: 'bordeaux-saint-jean',
+    coordinates: { lat: 44.8261, lon: -0.5569 },
+    region: 'Nouvelle-Aquitaine',
+    departement: 'Bordeaux',
+  },
+  'nantes': {
+    id: 'stop_area:OCE:SA:87481002',
+    name: 'Nantes',
+    slug: 'nantes',
+    coordinates: { lat: 47.2169, lon: -1.5412 },
+    region: 'Pays de la Loire',
+    departement: 'Nantes',
   },
 };
 

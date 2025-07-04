@@ -10,11 +10,12 @@ export const metadata = getMetadata(
 );
 
 export default function EnglishStationsPage() {
-  const popularStations = [
+  // All supported stations with working pages
+  const availableStations = [
     { name: 'Gare du Nord', city: 'Paris', region: 'Île-de-France', slug: 'gare-du-nord' },
     { name: 'Gare de Lyon', city: 'Paris', region: 'Île-de-France', slug: 'gare-de-lyon' },
     { name: 'Montparnasse', city: 'Paris', region: 'Île-de-France', slug: 'montparnasse' },
-    { name: 'Part-Dieu', city: 'Lyon', region: 'Auvergne-Rhône-Alpes', slug: 'lyon-part-dieu' },
+    { name: 'Part-Dieu', city: 'Lyon', region: 'Auvergne-Rhône-Alpes', slug: 'part-dieu' },
     { name: 'Marseille Saint-Charles', city: 'Marseille', region: 'Provence-Alpes-Côte d\'Azur', slug: 'marseille-saint-charles' },
     { name: 'Toulouse Matabiau', city: 'Toulouse', region: 'Occitanie', slug: 'toulouse-matabiau' },
     { name: 'Lille Europe', city: 'Lille', region: 'Hauts-de-France', slug: 'lille-europe' },
@@ -70,14 +71,14 @@ export default function EnglishStationsPage() {
             </p>
           </div>
 
-          {/* Popular Stations */}
+          {/* Available Stations */}
           <div className="bg-white rounded-2xl shadow-soft p-6 mb-8">
             <h2 className="text-xl font-semibold text-gray-900 mb-6 flex items-center">
               <Train className="w-5 h-5 mr-2" />
-              Most popular stations
+              Available stations
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {popularStations.map((station, index) => (
+              {availableStations.map((station, index) => (
                 <a
                   key={index}
                   href={`/gare/${station.slug}`}
