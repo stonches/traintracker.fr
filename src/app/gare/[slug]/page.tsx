@@ -37,6 +37,12 @@ const STATIONS = {
   },
 };
 
+export async function generateStaticParams() {
+  return Object.keys(STATIONS).map((slug) => ({
+    slug,
+  }));
+}
+
 export async function generateMetadata({ params }: StationPageProps) {
   const { slug } = await params;
   const station = STATIONS[slug as keyof typeof STATIONS];
