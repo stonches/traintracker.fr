@@ -8,14 +8,6 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true
   },
-  async rewrites() {
-    return [
-      {
-        source: '/api/:path*',
-        destination: '/api/:path*'
-      }
-    ];
-  },
   eslint: {
     ignoreDuringBuilds: true,
   },
