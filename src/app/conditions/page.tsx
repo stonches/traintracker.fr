@@ -67,13 +67,13 @@ export default function TermsPage() {
           </div>
 
           {/* Disclaimer */}
-          <div className="bg-warning-50 border border-warning-200 rounded-2xl p-8 mb-8">
+          <div className="bg-yellow-50 border border-yellow-200 rounded-2xl p-8 mb-8">
             <div className="flex items-start space-x-3">
-              <AlertTriangle className="w-6 h-6 text-warning-600 mt-1 flex-shrink-0" />
+              <AlertTriangle className="w-6 h-6 text-yellow-600 mt-1 flex-shrink-0" />
               <div>
-                <h2 className="text-2xl font-bold text-warning-800 mb-4">Avertissements et limitations</h2>
+                <h2 className="text-2xl font-bold text-yellow-800 mb-4">Avertissements et limitations</h2>
                 
-                <div className="space-y-4 text-warning-800">
+                <div className="space-y-4 text-yellow-800">
                   <div>
                     <h3 className="font-semibold mb-2">Service indépendant</h3>
                     <p>

@@ -29,14 +29,14 @@ export default function EnglishAboutPage() {
           </div>
 
           {/* Disclaimer */}
-          <div className="bg-warning-50 border border-warning-200 rounded-2xl p-6 mb-8">
+          <div className="bg-yellow-50 border border-yellow-200 rounded-2xl p-6 mb-8">
             <div className="flex items-start space-x-3">
-              <Shield className="w-6 h-6 text-warning-600 mt-1 flex-shrink-0" />
+              <Shield className="w-6 h-6 text-yellow-600 mt-1 flex-shrink-0" />
               <div>
-                <h2 className="text-lg font-semibold text-warning-800 mb-2">
+                <h2 className="text-lg font-semibold text-yellow-800 mb-2">
                   Important Disclaimer
                 </h2>
-                <p className="text-warning-800 leading-relaxed">
+                <p className="text-yellow-800 leading-relaxed">
                   <strong>Train Tracker France is an independent service and is NOT affiliated with SNCF, 
                   the French government, or any official transport authority in France.</strong> 
                   Information is provided for informational purposes and may not be complete or accurate. 

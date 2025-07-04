@@ -95,9 +95,9 @@ export function StrikesPanel({ lang }: StrikesPanelProps) {
 
   const getSeverityColor = (severity: string) => {
     switch (severity) {
-      case 'high': return 'text-danger-600 bg-danger-50 border-danger-200';
-      case 'medium': return 'text-warning-600 bg-warning-50 border-warning-200';
-      case 'low': return 'text-success-600 bg-success-50 border-success-200';
+      case 'high': return 'text-red-600 bg-red-50 border-red-200';
+      case 'medium': return 'text-yellow-600 bg-yellow-50 border-yellow-200';
+      case 'low': return 'text-green-600 bg-green-50 border-green-200';
       default: return 'text-gray-600 bg-gray-50 border-gray-200';
     }
   };
@@ -127,7 +127,7 @@ export function StrikesPanel({ lang }: StrikesPanelProps) {
       <div className="flex items-start justify-between mb-4">
         <div className="flex items-start space-x-3 flex-1">
           <div className="flex-shrink-0 mt-1">
-            <AlertTriangle className="w-5 h-5 text-danger-600" />
+            <AlertTriangle className="w-5 h-5 text-red-600" />
           </div>
           <div className="flex-1 min-w-0">
             <h3 className="text-lg font-semibold text-gray-900 mb-2">
@@ -155,13 +155,13 @@ export function StrikesPanel({ lang }: StrikesPanelProps) {
       {/* Impact Grid */}
       <div className="grid grid-cols-3 gap-4 mb-4">
         <div className="bg-gray-50 rounded-lg p-3 text-center">
-          <div className="text-2xl font-bold text-danger-600">
+          <div className="text-2xl font-bold text-red-600">
             {100 - strike.expectedImpact.nationalLines}%
           </div>
           <div className="text-xs text-gray-600">TGV/Intercités</div>
         </div>
         <div className="bg-gray-50 rounded-lg p-3 text-center">
-          <div className="text-2xl font-bold text-warning-600">
+          <div className="text-2xl font-bold text-yellow-600">
             {100 - strike.expectedImpact.regionalLines}%
           </div>
           <div className="text-xs text-gray-600">TER</div>

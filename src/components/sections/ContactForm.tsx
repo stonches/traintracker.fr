@@ -71,12 +71,12 @@ export function ContactForm({ lang }: ContactFormProps) {
       </h2>
 
       {submitStatus === 'success' && (
-        <div className="mb-6 p-4 bg-success-50 border border-success-200 rounded-lg">
+        <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
           <div className="flex items-center space-x-3">
-            <CheckCircle className="w-5 h-5 text-success-600" />
+            <CheckCircle className="w-5 h-5 text-green-600" />
             <div>
-              <h3 className="font-medium text-success-800">Message envoyé !</h3>
-              <p className="text-success-700 text-sm">
+              <h3 className="font-medium text-green-800">Message envoyé !</h3>
+              <p className="text-green-700 text-sm">
                 Nous avons bien reçu votre message et vous répondrons dans les plus brefs délais.
               </p>
             </div>
@@ -85,12 +85,12 @@ export function ContactForm({ lang }: ContactFormProps) {
       )}
 
       {submitStatus === 'error' && (
-        <div className="mb-6 p-4 bg-danger-50 border border-danger-200 rounded-lg">
+        <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
           <div className="flex items-center space-x-3">
-            <AlertCircle className="w-5 h-5 text-danger-600" />
+            <AlertCircle className="w-5 h-5 text-red-600" />
             <div>
-              <h3 className="font-medium text-danger-800">Erreur d'envoi</h3>
-              <p className="text-danger-700 text-sm">
+              <h3 className="font-medium text-red-800">Erreur d'envoi</h3>
+              <p className="text-red-700 text-sm">
                 Une erreur s'est produite. Veuillez réessayer ou nous contacter directement par email.
               </p>
             </div>

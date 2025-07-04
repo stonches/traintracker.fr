@@ -29,14 +29,14 @@ export default function AboutPage() {
           </div>
 
           {/* Disclaimer */}
-          <div className="bg-warning-50 border border-warning-200 rounded-2xl p-6 mb-8">
+          <div className="bg-yellow-50 border border-yellow-200 rounded-2xl p-6 mb-8">
             <div className="flex items-start space-x-3">
-              <Shield className="w-6 h-6 text-warning-600 mt-1 flex-shrink-0" />
+              <Shield className="w-6 h-6 text-yellow-600 mt-1 flex-shrink-0" />
               <div>
-                <h2 className="text-lg font-semibold text-warning-800 mb-2">
+                <h2 className="text-lg font-semibold text-yellow-800 mb-2">
                   Avertissement important
                 </h2>
-                <p className="text-warning-800 leading-relaxed">
+                <p className="text-yellow-800 leading-relaxed">
                   <strong>Train Tracker France est un service indépendant et n'est PAS affilié à la SNCF, 
                   au gouvernement français ou à toute autorité de transport officielle en France.</strong> 
                   Les informations sont fournies à titre informatif et peuvent ne pas être complètes ou exactes. 

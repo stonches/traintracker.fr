@@ -75,9 +75,9 @@ export function StrikeCalendar({ lang }: StrikeCalendarProps) {
 
   const getStrikeLevelColor = (level: string | null) => {
     switch (level) {
-      case 'high': return 'bg-danger-500';
-      case 'medium': return 'bg-warning-500';
-      case 'low': return 'bg-success-500';
+      case 'high': return 'bg-red-500';
+      case 'medium': return 'bg-yellow-500';
+      case 'low': return 'bg-green-500';
       default: return '';
     }
   };
@@ -180,15 +180,15 @@ export function StrikeCalendar({ lang }: StrikeCalendarProps) {
           <div className="text-xs font-medium text-gray-700 mb-2">Légende:</div>
           <div className="space-y-1">
             <div className="flex items-center space-x-2 text-xs">
-              <div className="w-2 h-2 bg-danger-500 rounded-full"></div>
+              <div className="w-2 h-2 bg-red-500 rounded-full"></div>
               <span className="text-gray-600">Grève importante</span>
             </div>
             <div className="flex items-center space-x-2 text-xs">
-              <div className="w-2 h-2 bg-warning-500 rounded-full"></div>
+              <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
               <span className="text-gray-600">Grève modérée</span>
             </div>
             <div className="flex items-center space-x-2 text-xs">
-              <div className="w-2 h-2 bg-success-500 rounded-full"></div>
+              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
               <span className="text-gray-600">Grève locale</span>
             </div>
           </div>
@@ -198,21 +198,21 @@ export function StrikeCalendar({ lang }: StrikeCalendarProps) {
         <div className="mt-4 pt-4 border-t border-gray-200">
           <div className="grid grid-cols-2 gap-4 text-center">
             <div className="bg-gray-50 rounded-lg p-3">
-              <div className="text-lg font-bold text-danger-600">2</div>
+              <div className="text-lg font-bold text-red-600">2</div>
               <div className="text-xs text-gray-600">Grèves ce mois</div>
             </div>
             <div className="bg-gray-50 rounded-lg p-3">
-              <div className="text-lg font-bold text-warning-600">5</div>
+              <div className="text-lg font-bold text-yellow-600">5</div>
               <div className="text-xs text-gray-600">Jours affectés</div>
             </div>
           </div>
         </div>
 
         {/* Alert for upcoming strikes */}
-        <div className="mt-4 p-3 bg-warning-50 border border-warning-200 rounded-lg">
+        <div className="mt-4 p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
           <div className="flex items-start space-x-2">
-            <AlertTriangle className="w-4 h-4 text-warning-600 mt-0.5 flex-shrink-0" />
-            <div className="text-xs text-warning-800">
+            <AlertTriangle className="w-4 h-4 text-yellow-600 mt-0.5 flex-shrink-0" />
+            <div className="text-xs text-yellow-800">
               <span className="font-medium">Prochaine grève:</span> 15-17 décembre 2024
             </div>
           </div>

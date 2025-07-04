@@ -94,18 +94,18 @@ export function StrikeAlert({ lang }: StrikeAlertProps) {
 
   const getSeverityColor = (severity: string) => {
     switch (severity) {
-      case 'high': return 'bg-danger-50 border-danger-200 text-danger-800';
-      case 'medium': return 'bg-warning-50 border-warning-200 text-warning-800';
-      case 'low': return 'bg-success-50 border-success-200 text-success-800';
+      case 'high': return 'bg-red-50 border-red-200 text-red-800';
+      case 'medium': return 'bg-yellow-50 border-yellow-200 text-yellow-800';
+      case 'low': return 'bg-green-50 border-green-200 text-green-800';
       default: return 'bg-gray-50 border-gray-200 text-gray-800';
     }
   };
 
   const getSeverityIcon = (severity: string) => {
     switch (severity) {
-      case 'high': return <AlertTriangle className="w-5 h-5 text-danger-600" />;
-      case 'medium': return <Clock className="w-5 h-5 text-warning-600" />;
-      case 'low': return <Clock className="w-5 h-5 text-success-600" />;
+      case 'high': return <AlertTriangle className="w-5 h-5 text-red-600" />;
+      case 'medium': return <Clock className="w-5 h-5 text-yellow-600" />;
+      case 'low': return <Clock className="w-5 h-5 text-green-600" />;
       default: return <Clock className="w-5 h-5 text-gray-600" />;
     }
   };
@@ -137,20 +137,20 @@ export function StrikeAlert({ lang }: StrikeAlertProps) {
   if (visibleStrikes.length === 0) {
     return (
       <div className="w-full max-w-4xl mx-auto mb-8">
-        <div className="bg-success-50 border border-success-200 rounded-2xl p-6">
+        <div className="bg-green-50 border border-green-200 rounded-2xl p-6">
           <div className="flex items-center space-x-3">
             <div className="flex-shrink-0">
-              <div className="w-8 h-8 bg-success-100 rounded-full flex items-center justify-center">
-                <svg className="w-5 h-5 text-success-600" fill="currentColor" viewBox="0 0 20 20">
+              <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                <svg className="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
               </div>
             </div>
             <div>
-              <h3 className="text-lg font-semibold text-success-800">
+              <h3 className="text-lg font-semibold text-green-800">
                 {t('home.noStrikesToday')}
               </h3>
-              <p className="text-success-700 mt-1">
+              <p className="text-green-700 mt-1">
                 Le trafic SNCF fonctionne normalement aujourd'hui.
               </p>
             </div>

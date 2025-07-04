@@ -164,9 +164,9 @@ export function JourneyPlanner({ lang }: JourneyPlannerProps) {
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'on_time': return 'text-success-600 bg-success-50';
-      case 'delayed': return 'text-warning-600 bg-warning-50';
-      case 'disrupted': return 'text-danger-600 bg-danger-50';
+      case 'on_time': return 'text-green-600 bg-green-50';
+      case 'delayed': return 'text-yellow-600 bg-yellow-50';
+      case 'disrupted': return 'text-red-600 bg-red-50';
       default: return 'text-gray-600 bg-gray-50';
     }
   };
@@ -361,10 +361,10 @@ export function JourneyPlanner({ lang }: JourneyPlannerProps) {
 
                     {/* Disruptions */}
                     {journey.disruptions.length > 0 && (
-                      <div className="mb-4 p-3 bg-warning-50 border border-warning-200 rounded-lg">
+                      <div className="mb-4 p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
                         <div className="flex items-start space-x-2">
-                          <AlertTriangle className="w-4 h-4 text-warning-600 mt-0.5 flex-shrink-0" />
-                          <div className="text-sm text-warning-800">
+                          <AlertTriangle className="w-4 h-4 text-yellow-600 mt-0.5 flex-shrink-0" />
+                          <div className="text-sm text-yellow-800">
                             {journey.disruptions.map((disruption, index) => (
                               <div key={index}>{disruption}</div>
                             ))}

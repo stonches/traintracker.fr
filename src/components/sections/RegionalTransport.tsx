@@ -160,9 +160,9 @@ export function RegionalTransport({ lang }: RegionalTransportProps) {
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'good': return 'text-success-600 bg-success-50 border-success-200';
-      case 'disrupted': return 'text-warning-600 bg-warning-50 border-warning-200';
-      case 'severely_disrupted': return 'text-danger-600 bg-danger-50 border-danger-200';
+      case 'good': return 'text-green-600 bg-green-50 border-green-200';
+      case 'disrupted': return 'text-yellow-600 bg-yellow-50 border-yellow-200';
+      case 'severely_disrupted': return 'text-red-600 bg-red-50 border-red-200';
       default: return 'text-gray-600 bg-gray-50 border-gray-200';
     }
   };
@@ -178,9 +178,9 @@ export function RegionalTransport({ lang }: RegionalTransportProps) {
 
   const getSeverityColor = (severity: string) => {
     switch (severity) {
-      case 'high': return 'text-danger-600 bg-danger-50 border-danger-200';
-      case 'medium': return 'text-warning-600 bg-warning-50 border-warning-200';
-      case 'low': return 'text-success-600 bg-success-50 border-success-200';
+      case 'high': return 'text-red-600 bg-red-50 border-red-200';
+      case 'medium': return 'text-yellow-600 bg-yellow-50 border-yellow-200';
+      case 'low': return 'text-green-600 bg-green-50 border-green-200';
       default: return 'text-gray-600 bg-gray-50 border-gray-200';
     }
   };
@@ -297,8 +297,8 @@ export function RegionalTransport({ lang }: RegionalTransportProps) {
 
                 {service.disruptions > 0 && (
                   <div className="flex items-center space-x-2 text-sm">
-                    <AlertTriangle className="w-4 h-4 text-warning-600" />
-                    <span className="text-warning-700">
+                    <AlertTriangle className="w-4 h-4 text-yellow-600" />
+                    <span className="text-yellow-700">
                       {service.disruptions} perturbation{service.disruptions > 1 ? 's' : ''} en cours
                     </span>
                   </div>
@@ -329,7 +329,7 @@ export function RegionalTransport({ lang }: RegionalTransportProps) {
         <div className="p-6 border-b border-gray-200">
           <div className="flex items-center justify-between">
             <h3 className="text-lg font-semibold text-gray-900 flex items-center space-x-2">
-              <AlertTriangle className="w-5 h-5 text-warning-600" />
+              <AlertTriangle className="w-5 h-5 text-yellow-600" />
               <span>Perturbations récentes</span>
             </h3>
             <button className="p-2 text-gray-500 hover:text-primary-600 transition-colors">
@@ -344,7 +344,7 @@ export function RegionalTransport({ lang }: RegionalTransportProps) {
               <div key={disruption.id} className="p-6">
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
-                    <AlertTriangle className="w-5 h-5 text-warning-600" />
+                    <AlertTriangle className="w-5 h-5 text-yellow-600" />
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-start justify-between mb-2">

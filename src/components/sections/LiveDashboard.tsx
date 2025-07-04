@@ -106,9 +106,9 @@ export function LiveDashboard({ lang }: LiveDashboardProps) {
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'good': return 'text-success-600 bg-success-50 border-success-200';
-      case 'disrupted': return 'text-warning-600 bg-warning-50 border-warning-200';
-      case 'severely_disrupted': return 'text-danger-600 bg-danger-50 border-danger-200';
+      case 'good': return 'text-green-600 bg-green-50 border-green-200';
+      case 'disrupted': return 'text-yellow-600 bg-yellow-50 border-yellow-200';
+      case 'severely_disrupted': return 'text-red-600 bg-red-50 border-red-200';
       default: return 'text-gray-600 bg-gray-50 border-gray-200';
     }
   };
@@ -124,9 +124,9 @@ export function LiveDashboard({ lang }: LiveDashboardProps) {
 
   const getSeverityColor = (severity: string) => {
     switch (severity) {
-      case 'high': return 'text-danger-600 bg-danger-50 border-danger-200';
-      case 'medium': return 'text-warning-600 bg-warning-50 border-warning-200';
-      case 'low': return 'text-success-600 bg-success-50 border-success-200';
+      case 'high': return 'text-red-600 bg-red-50 border-red-200';
+      case 'medium': return 'text-yellow-600 bg-yellow-50 border-yellow-200';
+      case 'low': return 'text-green-600 bg-green-50 border-green-200';
       default: return 'text-gray-600 bg-gray-50 border-gray-200';
     }
   };
@@ -214,7 +214,7 @@ export function LiveDashboard({ lang }: LiveDashboardProps) {
         {/* Major Delays */}
         <div className="bg-white rounded-2xl p-6 shadow-soft">
           <h3 className="text-lg font-semibold mb-4 flex items-center space-x-2">
-            <Clock className="w-5 h-5 text-warning-600" />
+            <Clock className="w-5 h-5 text-yellow-600" />
             <span>Retards importants</span>
           </h3>
           
@@ -231,7 +231,7 @@ export function LiveDashboard({ lang }: LiveDashboardProps) {
                   </div>
                 </div>
                 <div className="text-right">
-                  <div className="text-lg font-bold text-warning-600">
+                  <div className="text-lg font-bold text-yellow-600">
                     +{delay.averageDelay} min
                   </div>
                   <div className="text-xs text-gray-500">en moyenne</div>
@@ -251,7 +251,7 @@ export function LiveDashboard({ lang }: LiveDashboardProps) {
         {/* Recent Disruptions */}
         <div className="bg-white rounded-2xl p-6 shadow-soft">
           <h3 className="text-lg font-semibold mb-4 flex items-center space-x-2">
-            <AlertCircle className="w-5 h-5 text-danger-600" />
+            <AlertCircle className="w-5 h-5 text-red-600" />
             <span>{t('home.recentDisruptions')}</span>
           </h3>
           
