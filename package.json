@@ -19,7 +19,6 @@
     "react-hook-form": "^7.59.0"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "^1",
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
@@ -28,7 +27,6 @@
     "eslint": "^9",
     "eslint-config-next": "15.3.5",
     "tailwindcss": "^4",
-    "typescript": "^5",
-    "wrangler": "^3"
+    "typescript": "^5"
   }
 }
