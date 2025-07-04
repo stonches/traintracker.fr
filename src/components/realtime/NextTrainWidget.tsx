@@ -35,16 +35,30 @@ export default function NextTrainWidget({
 
   const fetchNextTrain = async () => {
     try {
-      const response = await fetch(`/api/stations/next-train/${stationId}`);
-      const data = await response.json();
+      // Mock data for static site - in production you'd call SNCF API directly
+      const departureTime = new Date(Date.now() + 12 * 60000); // 12 minutes from now
+      const mockNextTrain = {
+        train: {
+          id: '1',
+          numero: '7652',
+          type: 'TGV' as const,
+          nom: 'TGV INOUI',
+          destination: 'Lyon Part-Dieu',
+          heureDepart: departureTime.toISOString(),
+          voie: '3',
+          retard: 0,
+          statut: 'a_heure' as const
+        },
+        tempsRestant: {
+          millisecondes: 12 * 60000,
+          minutes: 12,
+          formatte: '12 min'
+        }
+      };
       
-      if (data.success) {
-        setNextTrain(data.data);
-        setCountdown(data.data.tempsRestant.millisecondes);
-        setError(null);
-      } else {
-        setError(data.error || 'Erreur lors de la récupération du prochain train');
-      }
+      setNextTrain(mockNextTrain);
+      setCountdown(mockNextTrain.tempsRestant.millisecondes);
+      setError(null);
     } catch (err) {
       setError('Erreur de connexion');
     } finally {

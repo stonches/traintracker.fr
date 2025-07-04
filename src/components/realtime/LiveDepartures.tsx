@@ -28,16 +28,39 @@ export default function LiveDepartures({
 
   const fetchDepartures = async () => {
     try {
-      const response = await fetch(`/api/stations/departures/${stationId}`);
-      const data = await response.json();
+      // Mock data for static site - in production you'd call SNCF API directly
+      const mockDepartures = {
+        gareId: stationId,
+        nom: stationName,
+        prochainsDepartures: [
+          {
+            id: '1',
+            numero: '7652',
+            type: 'TGV' as const,
+            nom: 'TGV INOUI',
+            destination: 'Lyon Part-Dieu',
+            heureDepart: new Date(Date.now() + 15 * 60000).toISOString(),
+            voie: '3',
+            retard: 0,
+            statut: 'a_heure' as const
+          },
+          {
+            id: '2',
+            numero: '865432',
+            type: 'TER' as const,
+            nom: 'TER GRAND EST',
+            destination: 'Strasbourg',
+            heureDepart: new Date(Date.now() + 28 * 60000).toISOString(),
+            voie: '7',
+            retard: 5,
+            statut: 'retard' as const
+          }
+        ]
+      };
       
-      if (data.success) {
-        setDepartures(data.data);
-        setError(null);
-        setLastUpdate(new Date());
-      } else {
-        setError(data.error || 'Erreur lors de la récupération des départs');
-      }
+      setDepartures(mockDepartures);
+      setError(null);
+      setLastUpdate(new Date());
     } catch (err) {
       setError('Erreur de connexion');
     } finally {
