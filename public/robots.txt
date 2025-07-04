@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Allow: /_next/static/
+Allow: *.js
+Allow: *.css
+
+Sitemap: https://traintracker.fr/sitemap.xml
+
+Disallow: /api/
+Disallow: /_next/webpack-hmr
+Disallow: /admin/
