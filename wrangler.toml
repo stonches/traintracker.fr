@@ -1,9 +1,0 @@
-name = "traintracker-fr"
-compatibility_date = "2024-07-04"
-pages_build_output_dir = "out"
-
-[env.production.vars]
-ENVIRONMENT = "production"
-
-[env.preview.vars]
-ENVIRONMENT = "preview"
