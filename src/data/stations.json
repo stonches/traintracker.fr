@@ -1,0 +1,694 @@
+{
+  "stations": [
+    {
+      "id": "stop_area:OCE:SA:87547000",
+      "name": "Paris Gare du Nord",
+      "slug": "paris-gare-du-nord",
+      "city": "Paris",
+      "region": "Île-de-France",
+      "coordinates": {
+        "lat": 48.8809,
+        "lon": 2.3553
+      },
+      "services": ["TGV", "Eurostar", "Thalys", "TER", "Transilien"],
+      "facilities": ["wifi", "restaurants", "shops", "accessibility", "parking"],
+      "description": "Principale gare du nord de Paris, terminus de l'Eurostar et du Thalys",
+      "descriptionEn": "Main northern station of Paris, terminus for Eurostar and Thalys"
+    },
+    {
+      "id": "stop_area:OCE:SA:87686006",
+      "name": "Paris Gare de Lyon",
+      "slug": "paris-gare-de-lyon",
+      "city": "Paris",
+      "region": "Île-de-France",
+      "coordinates": {
+        "lat": 48.8447,
+        "lon": 2.3730
+      },
+      "services": ["TGV", "TER", "Transilien"],
+      "facilities": ["wifi", "restaurants", "shops", "accessibility", "parking"],
+      "description": "Gare principale pour les trains vers le Sud-Est de la France",
+      "descriptionEn": "Main station for trains to Southeast France"
+    },
+    {
+      "id": "stop_area:OCE:SA:87391003",
+      "name": "Paris Montparnasse",
+      "slug": "paris-montparnasse",
+      "city": "Paris",
+      "region": "Île-de-France",
+      "coordinates": {
+        "lat": 48.8404,
+        "lon": 2.3194
+      },
+      "services": ["TGV", "TER", "Transilien"],
+      "facilities": ["wifi", "restaurants", "shops", "accessibility", "parking"],
+      "description": "Gare moderne desservant l'Ouest et le Sud-Ouest de la France",
+      "descriptionEn": "Modern station serving West and Southwest France"
+    },
+    {
+      "id": "stop_area:OCE:SA:87384008",
+      "name": "Paris Saint-Lazare",
+      "slug": "paris-saint-lazare",
+      "city": "Paris",
+      "region": "Île-de-France",
+      "coordinates": {
+        "lat": 48.8768,
+        "lon": 2.3252
+      },
+      "services": ["TER", "Transilien"],
+      "facilities": ["wifi", "restaurants", "shops", "accessibility", "parking"],
+      "description": "Gare historique desservant la Normandie",
+      "descriptionEn": "Historic station serving Normandy"
+    },
+    {
+      "id": "stop_area:OCE:SA:87271007",
+      "name": "Paris Gare de l'Est",
+      "slug": "paris-gare-de-l-est",
+      "city": "Paris",
+      "region": "Île-de-France",
+      "coordinates": {
+        "lat": 48.8768,
+        "lon": 2.3588
+      },
+      "services": ["TGV", "TER", "Transilien"],
+      "facilities": ["wifi", "restaurants", "shops", "accessibility", "parking"],
+      "description": "Gare vers l'Est de la France et l'Europe centrale",
+      "descriptionEn": "Station to Eastern France and Central Europe"
+    },
+    {
+      "id": "stop_area:OCE:SA:87547000",
+      "name": "Paris Austerlitz",
+      "slug": "paris-austerlitz",
+      "city": "Paris",
+      "region": "Île-de-France",
+      "coordinates": {
+        "lat": 48.8434,
+        "lon": 2.3656
+      },
+      "services": ["TER", "Transilien"],
+      "facilities": ["wifi", "restaurants", "shops", "accessibility", "parking"],
+      "description": "Gare historique vers le centre et le sud de la France",
+      "descriptionEn": "Historic station to central and southern France"
+    },
+    {
+      "id": "stop_area:OCE:SA:87681106",
+      "name": "Marne-la-Vallée Chessy",
+      "slug": "marne-la-vallee-chessy",
+      "city": "Marne-la-Vallée",
+      "region": "Île-de-France",
+      "coordinates": {
+        "lat": 48.8705,
+        "lon": 2.7793
+      },
+      "services": ["TGV", "RER"],
+      "facilities": ["wifi", "restaurants", "shops", "accessibility", "parking"],
+      "description": "Gare de Disneyland Paris",
+      "descriptionEn": "Disneyland Paris station"
+    },
+    {
+      "id": "stop_area:OCE:SA:87271411",
+      "name": "Roissy Charles de Gaulle",
+      "slug": "roissy-charles-de-gaulle",
+      "city": "Roissy-en-France",
+      "region": "Île-de-France",
+      "coordinates": {
+        "lat": 49.0047,
+        "lon": 2.5703
+      },
+      "services": ["TGV", "RER"],
+      "facilities": ["wifi", "restaurants", "shops", "accessibility", "parking"],
+      "description": "Gare de l'aéroport Charles de Gaulle",
+      "descriptionEn": "Charles de Gaulle Airport station"
+    },
+    {
+      "id": "stop_area:OCE:SA:87681000",
+      "name": "Lyon Part-Dieu",
+      "slug": "lyon-part-dieu",
+      "city": "Lyon",
+      "region": "Auvergne-Rhône-Alpes",
+      "coordinates": {
+        "lat": 45.7607,
+        "lon": 4.8594
+      },
+      "services": ["TGV", "TER", "Métro"],
+      "facilities": ["wifi", "restaurants", "shops", "accessibility", "parking"],
+      "description": "Principale gare de Lyon, hub TGV majeur",
+      "descriptionEn": "Main Lyon station, major TGV hub"
+    },
+    {
+      "id": "stop_area:OCE:SA:87722025",
+      "name": "Lyon Perrache",
+      "slug": "lyon-perrache",
+      "city": "Lyon",
+      "region": "Auvergne-Rhône-Alpes",
+      "coordinates": {
+        "lat": 45.7496,
+        "lon": 4.8267
+      },
+      "services": ["TGV", "TER", "Métro"],
+      "facilities": ["wifi", "restaurants", "shops", "accessibility", "parking"],
+      "description": "Gare historique de Lyon centre",
+      "descriptionEn": "Historic Lyon city center station"
+    },
+    {
+      "id": "stop_area:OCE:SA:87751008",
+      "name": "Marseille Saint-Charles",
+      "slug": "marseille-saint-charles",
+      "city": "Marseille",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "coordinates": {
+        "lat": 43.3032,
+        "lon": 5.3808
+      },
+      "services": ["TGV", "TER", "Métro"],
+      "facilities": ["wifi", "restaurants", "shops", "accessibility", "parking"],
+      "description": "Gare principale de Marseille",
+      "descriptionEn": "Main Marseille station"
+    },
+    {
+      "id": "stop_area:OCE:SA:87223263",
+      "name": "Lille Europe",
+      "slug": "lille-europe",
+      "city": "Lille",
+      "region": "Hauts-de-France",
+      "coordinates": {
+        "lat": 50.6393,
+        "lon": 3.0754
+      },
+      "services": ["TGV", "Eurostar", "Thalys"],
+      "facilities": ["wifi", "restaurants", "shops", "accessibility", "parking"],
+      "description": "Gare internationale de Lille",
+      "descriptionEn": "International Lille station"
+    },
+    {
+      "id": "stop_area:OCE:SA:87286005",
+      "name": "Lille Flandres",
+      "slug": "lille-flandres",
+      "city": "Lille",
+      "region": "Hauts-de-France",
+      "coordinates": {
+        "lat": 50.6356,
+        "lon": 3.0707
+      },
+      "services": ["TER", "Métro"],
+      "facilities": ["wifi", "restaurants", "shops", "accessibility", "parking"],
+      "description": "Gare historique de Lille",
+      "descriptionEn": "Historic Lille station"
+    },
+    {
+      "id": "stop_area:OCE:SA:87581009",
+      "name": "Bordeaux Saint-Jean",
+      "slug": "bordeaux-saint-jean",
+      "city": "Bordeaux",
+      "region": "Nouvelle-Aquitaine",
+      "coordinates": {
+        "lat": 44.8261,
+        "lon": -0.5561
+      },
+      "services": ["TGV", "TER", "Tram"],
+      "facilities": ["wifi", "restaurants", "shops", "accessibility", "parking"],
+      "description": "Gare principale de Bordeaux",
+      "descriptionEn": "Main Bordeaux station"
+    },
+    {
+      "id": "stop_area:OCE:SA:87611004",
+      "name": "Toulouse Matabiau",
+      "slug": "toulouse-matabiau",
+      "city": "Toulouse",
+      "region": "Occitanie",
+      "coordinates": {
+        "lat": 43.6107,
+        "lon": 1.4540
+      },
+      "services": ["TGV", "TER", "Métro"],
+      "facilities": ["wifi", "restaurants", "shops", "accessibility", "parking"],
+      "description": "Gare centrale de Toulouse",
+      "descriptionEn": "Central Toulouse station"
+    },
+    {
+      "id": "stop_area:OCE:SA:87756056",
+      "name": "Nice-Ville",
+      "slug": "nice-ville",
+      "city": "Nice",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "coordinates": {
+        "lat": 43.7042,
+        "lon": 7.2620
+      },
+      "services": ["TGV", "TER", "Tram"],
+      "facilities": ["wifi", "restaurants", "shops", "accessibility", "parking"],
+      "description": "Gare principale de Nice",
+      "descriptionEn": "Main Nice station"
+    },
+    {
+      "id": "stop_area:OCE:SA:87212027",
+      "name": "Strasbourg",
+      "slug": "strasbourg",
+      "city": "Strasbourg",
+      "region": "Grand Est",
+      "coordinates": {
+        "lat": 48.5847,
+        "lon": 7.7347
+      },
+      "services": ["TGV", "TER", "Tram"],
+      "facilities": ["wifi", "restaurants", "shops", "accessibility", "parking"],
+      "description": "Gare centrale de Strasbourg",
+      "descriptionEn": "Central Strasbourg station"
+    },
+    {
+      "id": "stop_area:OCE:SA:87481002",
+      "name": "Nantes",
+      "slug": "nantes",
+      "city": "Nantes",
+      "region": "Pays de la Loire",
+      "coordinates": {
+        "lat": 47.2170,
+        "lon": -1.5414
+      },
+      "services": ["TGV", "TER", "Tram"],
+      "facilities": ["wifi", "restaurants", "shops", "accessibility", "parking"],
+      "description": "Gare principale de Nantes",
+      "descriptionEn": "Main Nantes station"
+    },
+    {
+      "id": "stop_area:OCE:SA:87471003",
+      "name": "Rennes",
+      "slug": "rennes",
+      "city": "Rennes",
+      "region": "Bretagne",
+      "coordinates": {
+        "lat": 48.1033,
+        "lon": -1.6720
+      },
+      "services": ["TGV", "TER", "Métro"],
+      "facilities": ["wifi", "restaurants", "shops", "accessibility", "parking"],
+      "description": "Gare principale de Rennes",
+      "descriptionEn": "Main Rennes station"
+    },
+    {
+      "id": "stop_area:OCE:SA:87773000",
+      "name": "Montpellier Saint-Roch",
+      "slug": "montpellier-saint-roch",
+      "city": "Montpellier",
+      "region": "Occitanie",
+      "coordinates": {
+        "lat": 43.6047,
+        "lon": 3.8810
+      },
+      "services": ["TGV", "TER", "Tram"],
+      "facilities": ["wifi", "restaurants", "shops", "accessibility", "parking"],
+      "description": "Gare centrale de Montpellier",
+      "descriptionEn": "Central Montpellier station"
+    },
+    {
+      "id": "stop_area:OCE:SA:87725002",
+      "name": "Dijon-Ville",
+      "slug": "dijon-ville",
+      "city": "Dijon",
+      "region": "Bourgogne-Franche-Comté",
+      "coordinates": {
+        "lat": 47.3237,
+        "lon": 5.0270
+      },
+      "services": ["TGV", "TER"],
+      "facilities": ["wifi", "restaurants", "shops", "accessibility", "parking"],
+      "description": "Gare principale de Dijon",
+      "descriptionEn": "Main Dijon station"
+    },
+    {
+      "id": "stop_area:OCE:SA:87171009",
+      "name": "Reims",
+      "slug": "reims",
+      "city": "Reims",
+      "region": "Grand Est",
+      "coordinates": {
+        "lat": 49.2590,
+        "lon": 4.0236
+      },
+      "services": ["TGV", "TER"],
+      "facilities": ["wifi", "restaurants", "shops", "accessibility", "parking"],
+      "description": "Gare de Reims, champagne",
+      "descriptionEn": "Reims station, champagne region"
+    },
+    {
+      "id": "stop_area:OCE:SA:87571000",
+      "name": "Tours",
+      "slug": "tours",
+      "city": "Tours",
+      "region": "Centre-Val de Loire",
+      "coordinates": {
+        "lat": 47.3897,
+        "lon": 0.6930
+      },
+      "services": ["TGV", "TER"],
+      "facilities": ["wifi", "restaurants", "shops", "accessibility", "parking"],
+      "description": "Gare de Tours, Vallée de la Loire",
+      "descriptionEn": "Tours station, Loire Valley"
+    },
+    {
+      "id": "stop_area:OCE:SA:87481051",
+      "name": "Angers Saint-Laud",
+      "slug": "angers-saint-laud",
+      "city": "Angers",
+      "region": "Pays de la Loire",
+      "coordinates": {
+        "lat": 47.4646,
+        "lon": -0.5575
+      },
+      "services": ["TGV", "TER", "Tram"],
+      "facilities": ["wifi", "restaurants", "shops", "accessibility", "parking"],
+      "description": "Gare principale d'Angers",
+      "descriptionEn": "Main Angers station"
+    },
+    {
+      "id": "stop_area:OCE:SA:87394007",
+      "name": "Le Mans",
+      "slug": "le-mans",
+      "city": "Le Mans",
+      "region": "Pays de la Loire",
+      "coordinates": {
+        "lat": 47.9955,
+        "lon": 0.1929
+      },
+      "services": ["TGV", "TER"],
+      "facilities": ["wifi", "restaurants", "shops", "accessibility", "parking"],
+      "description": "Gare du Mans, circuit automobile",
+      "descriptionEn": "Le Mans station, racing circuit"
+    },
+    {
+      "id": "stop_area:OCE:SA:87581009",
+      "name": "Poitiers",
+      "slug": "poitiers",
+      "city": "Poitiers",
+      "region": "Nouvelle-Aquitaine",
+      "coordinates": {
+        "lat": 46.5802,
+        "lon": 0.3370
+      },
+      "services": ["TGV", "TER"],
+      "facilities": ["wifi", "restaurants", "shops", "accessibility", "parking"],
+      "description": "Gare de Poitiers",
+      "descriptionEn": "Poitiers station"
+    },
+    {
+      "id": "stop_area:OCE:SA:87594002",
+      "name": "Limoges Bénédictins",
+      "slug": "limoges-benedictins",
+      "city": "Limoges",
+      "region": "Nouvelle-Aquitaine",
+      "coordinates": {
+        "lat": 45.8355,
+        "lon": 1.2693
+      },
+      "services": ["TER"],
+      "facilities": ["wifi", "restaurants", "shops", "accessibility", "parking"],
+      "description": "Gare de Limoges, architecture remarquable",
+      "descriptionEn": "Limoges station, remarkable architecture"
+    },
+    {
+      "id": "stop_area:OCE:SA:87734004",
+      "name": "Clermont-Ferrand",
+      "slug": "clermont-ferrand",
+      "city": "Clermont-Ferrand",
+      "region": "Auvergne-Rhône-Alpes",
+      "coordinates": {
+        "lat": 45.7797,
+        "lon": 3.1039
+      },
+      "services": ["TER", "Tram"],
+      "facilities": ["wifi", "restaurants", "shops", "accessibility", "parking"],
+      "description": "Gare de Clermont-Ferrand, Auvergne",
+      "descriptionEn": "Clermont-Ferrand station, Auvergne"
+    },
+    {
+      "id": "stop_area:OCE:SA:87747006",
+      "name": "Grenoble",
+      "slug": "grenoble",
+      "city": "Grenoble",
+      "region": "Auvergne-Rhône-Alpes",
+      "coordinates": {
+        "lat": 45.1905,
+        "lon": 5.7139
+      },
+      "services": ["TER", "Tram"],
+      "facilities": ["wifi", "restaurants", "shops", "accessibility", "parking"],
+      "description": "Gare de Grenoble, Alpes",
+      "descriptionEn": "Grenoble station, Alps"
+    },
+    {
+      "id": "stop_area:OCE:SA:87318964",
+      "name": "Avignon TGV",
+      "slug": "avignon-tgv",
+      "city": "Avignon",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "coordinates": {
+        "lat": 43.9221,
+        "lon": 4.7859
+      },
+      "services": ["TGV"],
+      "facilities": ["wifi", "restaurants", "shops", "accessibility", "parking"],
+      "description": "Gare TGV d'Avignon",
+      "descriptionEn": "Avignon TGV station"
+    },
+    {
+      "id": "stop_area:OCE:SA:87319012",
+      "name": "Aix-en-Provence TGV",
+      "slug": "aix-en-provence-tgv",
+      "city": "Aix-en-Provence",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "coordinates": {
+        "lat": 43.4553,
+        "lon": 5.3174
+      },
+      "services": ["TGV"],
+      "facilities": ["wifi", "restaurants", "shops", "accessibility", "parking"],
+      "description": "Gare TGV d'Aix-en-Provence",
+      "descriptionEn": "Aix-en-Provence TGV station"
+    },
+    {
+      "id": "stop_area:OCE:SA:87760009",
+      "name": "Valence TGV",
+      "slug": "valence-tgv",
+      "city": "Valence",
+      "region": "Auvergne-Rhône-Alpes",
+      "coordinates": {
+        "lat": 44.9815,
+        "lon": 4.7858
+      },
+      "services": ["TGV"],
+      "facilities": ["wifi", "restaurants", "shops", "accessibility", "parking"],
+      "description": "Gare TGV de Valence",
+      "descriptionEn": "Valence TGV station"
+    },
+    {
+      "id": "stop_area:OCE:SA:87286062",
+      "name": "Massy TGV",
+      "slug": "massy-tgv",
+      "city": "Massy",
+      "region": "Île-de-France",
+      "coordinates": {
+        "lat": 48.7236,
+        "lon": 2.2580
+      },
+      "services": ["TGV", "RER"],
+      "facilities": ["wifi", "restaurants", "shops", "accessibility", "parking"],
+      "description": "Gare TGV de Massy",
+      "descriptionEn": "Massy TGV station"
+    },
+    {
+      "id": "stop_area:OCE:SA:87142109",
+      "name": "Calais-Ville",
+      "slug": "calais-ville",
+      "city": "Calais",
+      "region": "Hauts-de-France",
+      "coordinates": {
+        "lat": 50.9551,
+        "lon": 1.8503
+      },
+      "services": ["TER"],
+      "facilities": ["wifi", "restaurants", "shops", "accessibility", "parking"],
+      "description": "Gare de Calais, connexion Eurostar",
+      "descriptionEn": "Calais station, Eurostar connection"
+    },
+    {
+      "id": "stop_area:OCE:SA:87745007",
+      "name": "Modane",
+      "slug": "modane",
+      "city": "Modane",
+      "region": "Auvergne-Rhône-Alpes",
+      "coordinates": {
+        "lat": 45.1987,
+        "lon": 6.6556
+      },
+      "services": ["TER"],
+      "facilities": ["wifi", "restaurants", "shops", "accessibility", "parking"],
+      "description": "Gare frontalière avec l'Italie",
+      "descriptionEn": "Border station with Italy"
+    },
+    {
+      "id": "stop_area:OCE:SA:87796000",
+      "name": "Cerbère",
+      "slug": "cerbere",
+      "city": "Cerbère",
+      "region": "Occitanie",
+      "coordinates": {
+        "lat": 42.4447,
+        "lon": 3.1592
+      },
+      "services": ["TER"],
+      "facilities": ["wifi", "restaurants", "shops", "accessibility", "parking"],
+      "description": "Gare frontalière avec l'Espagne",
+      "descriptionEn": "Border station with Spain"
+    },
+    {
+      "id": "stop_area:OCE:SA:87786008",
+      "name": "Chamonix-Mont-Blanc",
+      "slug": "chamonix-mont-blanc",
+      "city": "Chamonix",
+      "region": "Auvergne-Rhône-Alpes",
+      "coordinates": {
+        "lat": 45.9237,
+        "lon": 6.8694
+      },
+      "services": ["TER"],
+      "facilities": ["wifi", "restaurants", "shops", "accessibility", "parking"],
+      "description": "Gare de Chamonix, station de ski",
+      "descriptionEn": "Chamonix station, ski resort"
+    },
+    {
+      "id": "stop_area:OCE:SA:87745455",
+      "name": "Bourg-Saint-Maurice",
+      "slug": "bourg-saint-maurice",
+      "city": "Bourg-Saint-Maurice",
+      "region": "Auvergne-Rhône-Alpes",
+      "coordinates": {
+        "lat": 45.6196,
+        "lon": 6.7708
+      },
+      "services": ["TER"],
+      "facilities": ["wifi", "restaurants", "shops", "accessibility", "parking"],
+      "description": "Gare vers les stations de ski",
+      "descriptionEn": "Station to ski resorts"
+    },
+    {
+      "id": "stop_area:OCE:SA:87747253",
+      "name": "Briançon",
+      "slug": "briancon",
+      "city": "Briançon",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "coordinates": {
+        "lat": 44.9011,
+        "lon": 6.6428
+      },
+      "services": ["TER"],
+      "facilities": ["wifi", "restaurants", "shops", "accessibility", "parking"],
+      "description": "Gare de Briançon, haute montagne",
+      "descriptionEn": "Briançon station, high mountains"
+    },
+    {
+      "id": "stop_area:OCE:SA:87796001",
+      "name": "Perpignan",
+      "slug": "perpignan",
+      "city": "Perpignan",
+      "region": "Occitanie",
+      "coordinates": {
+        "lat": 42.6987,
+        "lon": 2.8814
+      },
+      "services": ["TGV", "TER"],
+      "facilities": ["wifi", "restaurants", "shops", "accessibility", "parking"],
+      "description": "Gare de Perpignan, Catalogne française",
+      "descriptionEn": "Perpignan station, French Catalonia"
+    },
+    {
+      "id": "stop_area:OCE:SA:87581199",
+      "name": "Biarritz",
+      "slug": "biarritz",
+      "city": "Biarritz",
+      "region": "Nouvelle-Aquitaine",
+      "coordinates": {
+        "lat": 43.4588,
+        "lon": -1.5393
+      },
+      "services": ["TER"],
+      "facilities": ["wifi", "restaurants", "shops", "accessibility", "parking"],
+      "description": "Gare de Biarritz, station balnéaire",
+      "descriptionEn": "Biarritz station, seaside resort"
+    },
+    {
+      "id": "stop_area:OCE:SA:87501007",
+      "name": "La Rochelle",
+      "slug": "la-rochelle",
+      "city": "La Rochelle",
+      "region": "Nouvelle-Aquitaine",
+      "coordinates": {
+        "lat": 46.1514,
+        "lon": -1.1411
+      },
+      "services": ["TGV", "TER"],
+      "facilities": ["wifi", "restaurants", "shops", "accessibility", "parking"],
+      "description": "Gare de La Rochelle, port atlantique",
+      "descriptionEn": "La Rochelle station, Atlantic port"
+    },
+    {
+      "id": "stop_area:OCE:SA:87471102",
+      "name": "Saint-Malo",
+      "slug": "saint-malo",
+      "city": "Saint-Malo",
+      "region": "Bretagne",
+      "coordinates": {
+        "lat": 48.6471,
+        "lon": -2.0258
+      },
+      "services": ["TER"],
+      "facilities": ["wifi", "restaurants", "shops", "accessibility", "parking"],
+      "description": "Gare de Saint-Malo, cité corsaire",
+      "descriptionEn": "Saint-Malo station, corsair city"
+    },
+    {
+      "id": "stop_area:OCE:SA:87470904",
+      "name": "Quimper",
+      "slug": "quimper",
+      "city": "Quimper",
+      "region": "Bretagne",
+      "coordinates": {
+        "lat": 47.9971,
+        "lon": -4.0984
+      },
+      "services": ["TER"],
+      "facilities": ["wifi", "restaurants", "shops", "accessibility", "parking"],
+      "description": "Gare de Quimper, Finistère",
+      "descriptionEn": "Quimper station, Finistère"
+    },
+    {
+      "id": "stop_area:OCE:SA:87581793",
+      "name": "Bayonne",
+      "slug": "bayonne",
+      "city": "Bayonne",
+      "region": "Nouvelle-Aquitaine",
+      "coordinates": {
+        "lat": 43.4899,
+        "lon": -1.4748
+      },
+      "services": ["TER"],
+      "facilities": ["wifi", "restaurants", "shops", "accessibility", "parking"],
+      "description": "Gare de Bayonne, Pays basque",
+      "descriptionEn": "Bayonne station, Basque Country"
+    },
+    {
+      "id": "stop_area:OCE:SA:87756001",
+      "name": "Cannes",
+      "slug": "cannes",
+      "city": "Cannes",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "coordinates": {
+        "lat": 43.5527,
+        "lon": 7.0127
+      },
+      "services": ["TER"],
+      "facilities": ["wifi", "restaurants", "shops", "accessibility", "parking"],
+      "description": "Gare de Cannes, festival de cinéma",
+      "descriptionEn": "Cannes station, film festival"
+    }
+  ]
+}
